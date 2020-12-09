@@ -18,7 +18,7 @@ def rss_check():
             except requests.exceptions.ReadTimeout:
                 pass
             if r.status_code == 200:
-                print("An RSS feed was found for: " + feed)
+                print("An RSS feed was found: " + feed)
                 #Insert CSV writer here for results
                 with open("rss.csv", "a") as output:
                         output.write(feed + "\n")
